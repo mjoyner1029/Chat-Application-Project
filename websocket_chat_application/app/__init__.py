@@ -3,10 +3,9 @@ from flask_socketio import SocketIO
 from flask_cors import CORS
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your_secret_key'
+app.config['SECRET_KEY'] = 'your_secret_key'  # Change this to a more secure key
 CORS(app)
 
 socketio = SocketIO(app)
 
 from app import routes
-
